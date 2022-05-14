@@ -15,11 +15,11 @@ public class EnemyIA : MonoBehaviour
         if (Vector3.Distance(target.position, transform.position) > 3f){
             agent.destination = target.position;
         }else{
-            Debug.Log("Você Morreu");
-            GameOverScreen.SetActive(true);
-            if(Input.anyKeyDown) {
-                SceneManager.LoadScene( SceneManager.GetActiveScene().name );
-            }
+            // Debug.Log("Você Morreu");
+            // GameOverScreen.SetActive(true);
+            // if(Input.anyKeyDown) {
+            //     SceneManager.LoadScene( SceneManager.GetActiveScene().name );
+            // }
         }
     }
 }

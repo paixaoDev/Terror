@@ -40,8 +40,10 @@
      <Compile Include="Assets/Scripts/SimpleCameraController.cs" />
      <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
      <Compile Include="Assets/Scripts/SimpleFirtPersonCamera.cs" />
-     <Compile Include="Assets/Scripts/EnemyIA.cs" />
      <Compile Include="Assets/Scripts/HeathController.cs" />
+     <Compile Include="Assets/Scripts/EnemyIA.cs" />
+     <Compile Include="Assets/Scripts/Interaction/InteractionFeedback.cs" />
+     <Compile Include="Assets/Scripts/Interaction/ActivatorSwith.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2020.3.32f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
