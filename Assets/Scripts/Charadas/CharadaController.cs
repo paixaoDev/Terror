@@ -6,6 +6,7 @@ public class CharadaController : MonoBehaviour
 {
     public static CharadaController instance;
     public List<Charada> charadas;
+    public GameObject vitoryScreen;
 
     void Awake (){
         instance = this;
@@ -13,6 +14,12 @@ public class CharadaController : MonoBehaviour
 
     void Start (){
         ActivateCharada();
+    }
+
+    void Update (){
+        if(charadas.Count <= 0){
+            vitoryScreen.SetActive(true);
+        }
     }
 
     public void ActivateCharada (){
