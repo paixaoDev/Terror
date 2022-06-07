@@ -6976,6 +6976,12 @@ MonoBehaviour:
   GameOverScreen: {fileID: 942593294}
   agent: {fileID: 1428997457}
   target: {fileID: 747013903}
+  canKill: 1
+  scareAudio:
+  - {fileID: 8300000, guid: a5954d4bc094748cf9080a04a2eafa00, type: 3}
+  - {fileID: 8300000, guid: 6c09e07df682d48e893dbabe61b8b36a, type: 3}
+  - {fileID: 8300000, guid: 3dec2b39c46a446d6b1f025849747953, type: 3}
+  source: {fileID: 1428997459}
 --- !u!82 &1428997459
 AudioSource:
   m_ObjectHideFlags: 0
