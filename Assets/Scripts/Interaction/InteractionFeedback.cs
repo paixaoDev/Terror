@@ -16,6 +16,9 @@ public class InteractionFeedback : MonoBehaviour
 
     [SerializeField] MovementType movementType;
 
+    private Item charada;
+    private bool hasGiven = false;
+
     float time = 0;
     bool activated = false;
 
@@ -35,6 +38,7 @@ public class InteractionFeedback : MonoBehaviour
 
     public void Activate (){
         activated = true;
+        GiveCharada();
     }
 
     void Move (){
@@ -44,5 +48,17 @@ public class InteractionFeedback : MonoBehaviour
     void Rotate (){
         feedbackTransform.position = Vector3.Lerp (feedbackTransform.position, feedbackFinishPosition.position, feedbackTime * Time.deltaTime );
         feedbackTransform.rotation = Quaternion.Slerp(feedbackTransform.rotation, feedbackFinishPosition.rotation, feedbackTime * Time.deltaTime );
+    }
+
+    public void GetCharada (Item item){
+        charada = item;
+    }
+
+    void GiveCharada () {
+        if(!hasGiven){
+            CharadaController.instance.ActivateNextCharada();
+            Inventory.instance.PopulateIventory(charada.texto, charada.charada);    
+            hasGiven = true;
+        }
     }
 }
